@@ -73,12 +73,13 @@ a {
 }
 .project_list {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     transition: 2s;
     opacity: 0;
 }
-.first_project {
+.project {
     margin-top: 100px;
     height: 200px;
     width: 500px;
@@ -88,15 +89,15 @@ a {
 }
 .first_project_text {
     padding: 20px;
-    font-size: 25px;
+    font-size: 22px;
     color: #454545;
 }
-.first_project a {
+.project a {
     color: #5d5d5d;
     padding: 20px;
     font-size: 20px;
 }
-.first_project a:hover {
+.project a:hover {
     color: #1e1e1e;
 }
 .footer {
