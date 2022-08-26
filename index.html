@@ -62,12 +62,12 @@
 
         $(function() {
             let header = $('.header')
-            let hederHeight = header.height()
+            let headerHeight = header.height()
             $(window).scroll(function() {
                 if($(this).scrollTop() > 1) {
                     header.addClass('header_fixed')
                     $('body').css({
-                        'paddingTop': hederHeight+'px'
+                        'paddingTop': headerHeight + 'px'
                     });
                 } else {
                     header.removeClass('header_fixed')
