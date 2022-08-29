@@ -68,7 +68,7 @@ hr {
 .main {
     margin: 0 auto;
     background-color: #e0e0e0;
-    height: 750px;
+    height: 100%;
 }
 .work_space {
     display: flex;
@@ -89,6 +89,7 @@ hr {
     margin-right: 40px;
     height: 100%;
     padding: 20px;
+    margin-bottom: 200px;
 }
 .settings_main_title {
     text-align: center;
