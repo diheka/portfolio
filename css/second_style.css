@@ -72,16 +72,21 @@ hr {
 }
 .work_space {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     transition: 2s;
     opacity: 0;
+}
+.work_space_inner {
+    display: flex;
 }
 .form_cover {
     background-color: rgb(247, 247, 247);
     border: 1px solid #c8c8c8;
     border-radius: 4px;
     margin-top: 40px;
+    margin-right: 40px;
     height: 100%;
     padding: 20px;
 }
@@ -205,23 +210,23 @@ input[type=range]::-moz-range-thumb {
 }
 .result_area {
     margin-top: 20px;
+    margin-left: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 #result {
-    margin-top: 200px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 257px;
+    width: 350px;
     height: 57px;
     font-size: 15px;
-    font-style: oblique;
 } 
 .cssCode_block textarea {
     resize: none;
-    height: 100px;
+    height: 80px;
     width: 300px;
     padding: 4px;
     border: 1px solid #c8c8c8;
@@ -242,7 +247,7 @@ input[type=range]::-moz-range-thumb {
 	-moz-appearance: none;
 }
 .cssCode_title {
-    margin-top: 240px;
+    margin-top: 20px;
     margin-bottom: 10px;
     font-family: Montserrat;
     color: #5b5b5b;
