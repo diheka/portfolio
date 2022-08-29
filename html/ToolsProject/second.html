@@ -8,90 +8,90 @@
     <link rel="stylesheet" href="../../css/second_style.css">
 </head>
 <body>
-    <div class="header">
-        <div class="container">
-            <div class="header_inner">
-                <a href="../../index.html"><div class="header_logo">SHTOKINN</div></a>
-                <a href="first.html"><div class="header_btn">BOX-SHADOW GENERATOR</div></a>
-                <a href="second.html"><div class="header_btn">TEXT GENERATOR</div></a>
-                <a href="third.html"><div class="header_btn">BORDER-RADIUS GENERATOR</div></a>
+    <div class="wrapper">
+        <div class="header">
+            <div class="container">
+                <div class="header_inner">
+                    <a href="../../index.html"><div class="header_logo">SHTOKINN</div></a>
+                    <a href="first.html"><div class="header_btn">BOX-SHADOW GENERATOR</div></a>
+                    <a href="second.html"><div class="header_btn">TEXT GENERATOR</div></a>
+                    <a href="third.html"><div class="header_btn">BORDER-RADIUS GENERATOR</div></a>
+                </div>
             </div>
         </div>
-    </div>
 
-
-    <div class="main">
-        <div class="container">
-            <div class="main_inner">
-                <div class="work_space">
-                    <div id="result">Text content</div>
-                    <div class="work_space_inner">
-                        <div class="form_cover">
-                            <form class="settings">
-                                <h3 class="settings_main_title">SETTINGS</h3>
-                                <hr>
-                                <div class="text_exmpl">
-                                    <textarea id="exampleText" placeholder="Write your text" maxlength="12"></textarea>
-                                </div>
-                                <hr>
-                                <div class="checkbox">
-                                    <input class="custom-checkbox" type="checkbox" id="color-1" name="color-1" value="italic">
-                                    <label for="color-1" class="italic_title">Italic</label>
-                                </div>
-                                <div class="font_size">
-                                    <p class="settings_title">Font Size</p>
-                                    <input  type="range" id="font_size" min="10" max="50" value="15" step="1"/>
-                                    <div class="font_size_range">
-                                        <div class="null_font_size">10px</div>
-                                        <div class="end_font_size">50px</div>
+        <div class="main">
+            <div class="container">
+                <div class="main_inner">
+                    <div class="work_space">
+                        <div id="result">Text content</div>
+                        <div class="work_space_inner">
+                            <div class="form_cover">
+                                <form class="settings">
+                                    <h3 class="settings_main_title">SETTINGS</h3>
+                                    <hr>
+                                    <div class="text_exmpl">
+                                        <textarea id="exampleText" placeholder="Write your text" maxlength="12"></textarea>
                                     </div>
-                                </div>
-                                <div class="color">
-                                    <div class="color_title">Text Color</div>
-                                    <input type="color" id="font_color">
-                                </div>
-                                <hr>
-                                <div class="font_shadow_block">
-                                    <div class="shift_right">
-                                        <p class="settings_title">Shift right</p>
-                                        <input  type="range" id="offsetX" min="-25" max="25" value="0" step="1"/>
+                                    <hr>
+                                    <div class="checkbox">
+                                        <input class="custom-checkbox" type="checkbox" id="color-1" name="color-1" value="italic">
+                                        <label for="color-1" class="italic_title">Italic</label>
                                     </div>
-                                    <div class="shift_down">
-                                        <p class="settings_title">Shift down</p>
-                                        <input  type="range" id="offsetY" min="-25" max="25" value="0" step="1"/>
-                                    </div>
-                                    <div class="blur">
-                                        <p class="settings_title">Blur</p>
-                                        <input  type="range" id="blur" min="0" max="25" value="10" step="1"/>
+                                    <div class="font_size">
+                                        <p class="settings_title">Font Size</p>
+                                        <input  type="range" id="font_size" min="10" max="50" value="15" step="1"/>
+                                        <div class="font_size_range">
+                                            <div class="null_font_size">10px</div>
+                                            <div class="end_font_size">50px</div>
+                                        </div>
                                     </div>
                                     <div class="color">
-                                        <div class="color_title">Shadow Color</div>
-                                        <input type="color" id="color">
+                                        <div class="color_title">Text Color</div>
+                                        <input type="color" id="font_color">
                                     </div>
+                                    <hr>
+                                    <div class="font_shadow_block">
+                                        <div class="shift_right">
+                                            <p class="settings_title">Shift right</p>
+                                            <input  type="range" id="offsetX" min="-25" max="25" value="0" step="1"/>
+                                        </div>
+                                        <div class="shift_down">
+                                            <p class="settings_title">Shift down</p>
+                                            <input  type="range" id="offsetY" min="-25" max="25" value="0" step="1"/>
+                                        </div>
+                                        <div class="blur">
+                                            <p class="settings_title">Blur</p>
+                                            <input  type="range" id="blur" min="0" max="25" value="10" step="1"/>
+                                        </div>
+                                        <div class="color">
+                                            <div class="color_title">Shadow Color</div>
+                                            <input type="color" id="color">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="result_area">
+                                <div class="cssCode_block">
+                                    <p class="cssCode_title">CSS code</p>
+                                    <textarea id="cssCode" readonly></textarea>
                                 </div>
-                            </form>
-                        </div>
-                        <div class="result_area">
-                            <div class="cssCode_block">
-                                <p class="cssCode_title">CSS code</p>
-                                <textarea id="cssCode" readonly></textarea>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="footer">
-        <div class="container">
-            <div class="footer_inner">
-                <div class="rights">All Rights Reserved | 2022</div>
-                <div class="footer_logo">SHTOKINN</div>
+        <div class="footer">
+            <div class="container">
+                <div class="footer_inner">
+                    <div class="rights">All Rights Reserved | 2022</div>
+                    <div class="footer_logo">SHTOKINN</div>
+                </div>
             </div>
         </div>
     </div>
-
     <script>
         document.addEventListener('DOMContentLoaded', function (e){
             setTimeout(() => {

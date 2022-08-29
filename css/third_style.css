@@ -14,8 +14,14 @@
     box-sizing: inherit;
     font-family: Franklin Gothic Book;
 }
-html {
+html, body {
     box-sizing: border-box;
+    height: 100%;
+}
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 body,p,h1,h2,h3,ul,ol{
     margin: 0;
@@ -64,9 +70,10 @@ hr {
     color: #f5f5f5;
 }
 .main {
+    flex: 1 1 auto;
     margin: 0 auto;
     background-color: #e0e0e0;
-    height: 750px;
+    width: 100%;
 }
 .work_space {
     display: flex;
@@ -77,7 +84,7 @@ hr {
 }
 .form_cover {
     background-color: rgb(247, 247, 247);
-    border: 1px solid #e1e8ed;
+    border: 1px solid #c8c8c8;
     border-radius: 4px;
     margin-top: 40px;
     height: 100%;
@@ -91,6 +98,8 @@ hr {
 .inset_title {
     color: #5b5b5b;
 }
+
+
 .custom-checkbox {
     position: absolute;
     z-index: -1;
@@ -200,9 +209,12 @@ textarea {
     resize: none;
     height: 88px;
     width: 300px;
-    border: 1px solid #e1e8ed;
+    padding: 4px;
+    border: 1px solid #c8c8c8;
     border-radius: 4px;
     color: #5b5b5b;
+    outline: none;
+	-moz-appearance: none;
 }
 .cssCode_title {
     margin-top: 123px;
@@ -210,6 +222,8 @@ textarea {
     font-family: Montserrat;
     color: #5b5b5b;
 }
+
+
 .footer {
     background-color: #717171;
     height: 100px;
