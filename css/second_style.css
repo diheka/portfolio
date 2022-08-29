@@ -257,6 +257,7 @@ input[type=range]::-moz-range-thumb {
 
 
 .footer {
+    position: absolute;
     background-color: #717171;
     height: 100px;
 }
