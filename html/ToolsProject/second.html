@@ -3,22 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Text Generator</title>
     <link rel="stylesheet" href="../../css/second_style.css">
 </head>
 <body>
     <div class="wrapper">
-        <div class="header">
+        <header class="header">
             <div class="container">
                 <div class="header_inner">
                     <a href="../../index.html"><div class="header_logo">SHTOKINN</div></a>
-                    <a href="first.html"><div class="header_btn">BOX-SHADOW GENERATOR</div></a>
-                    <a href="second.html"><div class="header_btn">TEXT GENERATOR</div></a>
-                    <a href="third.html"><div class="header_btn">BORDER-RADIUS GENERATOR</div></a>
+                    <div class="header_burger">
+                        <span></span>
+                    </div>
+                    <nav class="header_menu">
+                        <ul class="menu_inner">
+                            <li><a href="first.html">BOX-SHADOW GENERATOR</a></li>
+                            <li><a href="second.html">TEXT GENERATOR</a></li>
+                            <li><a href="third.html">BORDER-RADIUS GENERATOR</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-        </div>
+        </header>
 
         <div class="main">
             <div class="container">
@@ -132,6 +139,16 @@
             item.addEventListener('input', generateText)
         }
         generateText()
+
+        let header_burger = document.querySelector('.header_burger')
+        let header_menu = document.querySelector('.header_menu')
+        let body = document.querySelector('body')
+
+        header_burger.onclick = function () {
+            header_burger.classList.toggle('active')
+            header_menu.classList.toggle('active')
+            body.classList.toggle('lock')
+        }
     </script>
 </body>
 </html>
