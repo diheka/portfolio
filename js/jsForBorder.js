@@ -57,7 +57,9 @@ let result = document.getElementById('result')
       bottom_right_btn.style.opacity = 0.3
     }
 
+    // обработка событий зажатия мыши / пальца
 
+    // Для верхнего левого угла
 
     top_left_btn.onmousedown = function (e) {
       e.preventDefault()
@@ -87,7 +89,37 @@ let result = document.getElementById('result')
         document.removeEventListener('mouseup', onMouseUp)
       }
     }
+
+    top_left_btn.ontouchstart = function (e) {
+        e.preventDefault()
+        let shiftX = e.clientX - top_left_btn.getBoundingClientRect().left
+        let shiftY = e.clientY - top_left_btn.getBoundingClientRect().top
+  
+        document.addEventListener('touchmove', onMouseMove)
+        document.addEventListener('touchend', onMouseUp)
+  
+        function onMouseMove (e) {
+          let newLeft = e.clientX - shiftX - result.getBoundingClientRect().left
+          let newTop = e.clientY - shiftY - result.getBoundingClientRect().top
+          if (newLeft < 0) newLeft = 0
+          if (newTop < 0) newTop = 0
+          if (newLeft != newTop) newTop = newLeft
+          if (newLeft > 80) { 
+            newLeft = 80
+            newTop = 80
+          }
+          top_left_btn.style.left = newLeft + 'px'
+          top_left_btn.style.top = newTop + 'px'
+          result.style.borderTopLeftRadius = newLeft + 'px'
+        }
+  
+        function onMouseUp (e) {
+          document.removeEventListener('touchmove', onMouseMove)
+          document.removeEventListener('touchend', onMouseUp)
+        }
+      }
     
+    // Для верхнего правого угла
     top_right_btn.onmousedown = function (e) {
       e.preventDefault()
       let shiftX = e.clientX - top_right_btn.getBoundingClientRect().left
@@ -116,7 +148,37 @@ let result = document.getElementById('result')
         document.removeEventListener('mouseup', onMouseUp)
       }
     }
+
+    top_right_btn.ontouchstart = function (e) {
+        e.preventDefault()
+        let shiftX = e.clientX - top_right_btn.getBoundingClientRect().left
+        let shiftY = e.clientY - top_right_btn.getBoundingClientRect().top
+  
+        document.addEventListener('touchmove', onMouseMove)
+        document.addEventListener('touchend', onMouseUp)
+  
+        function onMouseMove (e) {
+          let newLeft = e.clientX - shiftX - result.getBoundingClientRect().right + 20 
+          let newTop = e.clientY - shiftY - result.getBoundingClientRect().top
+          if (newLeft > 0) newLeft = 0
+          if (newTop < 0) newTop = 0
+          if (newLeft != newTop) newTop = newLeft
+          if (newLeft < -80) { 
+            newLeft = -80
+            newTop = -80
+          }
+          top_right_btn.style.left = newLeft + 'px'
+          top_right_btn.style.top = 0 - newTop + 'px'
+          result.style.borderTopRightRadius = newLeft * (-1) + 'px'
+        }
+  
+        function onMouseUp (e) {
+          document.removeEventListener('touchmove', onMouseMove)
+          document.removeEventListener('touchend', onMouseUp)
+        }
+      }
     
+    // Для нижнего левого угла
     bottom_left_btn.onmousedown = function (e) {
       e.preventDefault()
       let shiftX = e.clientX - bottom_left_btn.getBoundingClientRect().left
@@ -145,7 +207,37 @@ let result = document.getElementById('result')
         document.removeEventListener('mouseup', onMouseUp)
       }
     }
+
+    bottom_left_btn.ontouchstart = function (e) {
+        e.preventDefault()
+        let shiftX = e.clientX - bottom_left_btn.getBoundingClientRect().left
+        let shiftY = e.clientY - bottom_left_btn.getBoundingClientRect().top
+  
+        document.addEventListener('touchmove', onMouseMove)
+        document.addEventListener('touchend', onMouseUp)
+  
+        function onMouseMove (e) {
+          let newLeft = e.clientX - shiftX - result.getBoundingClientRect().left 
+          let newTop = e.clientY - shiftY - result.getBoundingClientRect().bottom
+          if (newLeft < 0) newLeft = 0
+          if (newTop < 0) newTop = 0
+          if (newLeft != newTop) newTop = newLeft
+          if (newLeft > 80) { 
+            newLeft = 80
+            newTop = 80
+          }
+          bottom_left_btn.style.left = newLeft + 'px'
+          bottom_left_btn.style.top = 0 - newTop + 'px'
+          result.style.borderBottomLeftRadius = newLeft + 'px'
+        }
+  
+        function onMouseUp (e) {
+          document.removeEventListener('touchmove', onMouseMove)
+          document.removeEventListener('touchend', onMouseUp)
+        }
+      }
     
+    // Для нижнего правого угла
     bottom_right_btn.onmousedown = function (e) {
       e.preventDefault()
       let shiftX = e.clientX - bottom_right_btn.getBoundingClientRect().left
@@ -174,6 +266,35 @@ let result = document.getElementById('result')
         document.removeEventListener('mouseup', onMouseUp)
       }
     }
+
+    bottom_right_btn.ontouchstart = function (e) {
+        e.preventDefault()
+        let shiftX = e.clientX - bottom_right_btn.getBoundingClientRect().left
+        let shiftY = e.clientY - bottom_right_btn.getBoundingClientRect().top
+  
+        document.addEventListener('touchmove', onMouseMove)
+        document.addEventListener('touchend', onMouseUp)
+  
+        function onMouseMove (e) {
+          let newLeft = e.clientX - shiftX - result.getBoundingClientRect().right + 20 
+          let newTop = e.clientY - shiftY - result.getBoundingClientRect().bottom
+          if (newLeft > 0) newLeft = 0
+          if (newTop > 0) newTop = 0
+          if (newLeft != newTop) newTop = newLeft
+          if (newLeft < -80) { 
+            newLeft = -80
+            newTop = -80
+          }
+          bottom_right_btn.style.left = newLeft + 'px'
+          bottom_right_btn.style.top = newTop + 'px'
+          result.style.borderBottomRightRadius = newLeft * (-1) + 'px'
+        }
+  
+        function onMouseUp (e) {
+          document.removeEventListener('touchmove', onMouseMove)
+          document.removeEventListener('touchend', onMouseUp)
+        }
+      }
     
     
     // стандартный обработчик события перетаскивания элемента
