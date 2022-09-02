@@ -3,27 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Instrument</title>
     <link rel="stylesheet" href="../../css/third_style.css">
 </head>
 <body>
     <div class="wrapper">
-        <div class="header">
+        <header class="header">
             <div class="container">
                 <div class="header_inner">
                     <a href="../../index.html"><div class="header_logo">SHTOKINN</div></a>
-                    <a href="first.html"><div class="header_btn">BOX-SHADOW GENERATOR</div></a>
-                    <a href="second.html"><div class="header_btn">TEXT GENERATOR</div></a>
-                    <a href="third.html"><div class="header_btn">BORDER-RADIUS GENERATOR</div></a>
+                    <div class="header_burger">
+                        <span></span>
+                    </div>
+                    <nav class="header_menu">
+                        <ul class="menu_inner">
+                            <li><a href="first.html">BOX-SHADOW GENERATOR</a></li>
+                            <li><a href="second.html">TEXT GENERATOR</a></li>
+                            <li><a href="third.html">BORDER-RADIUS GENERATOR</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-        </div>
+        </header>
 
         <div class="main">
             <div class="container">
                 <div class="main_inner">
-                    
+                    <div class="work_space">
+                        <div class="form_cover">
+                            <form class="settings">
+                                <h3 class="settings_main_title">SETTINGS</h3>
+                                <hr>
+                                <!-- <div class="top_ranges">
+                                    <div class="top_left">
+                                        <p class="settings_title">Radius</p>
+                                        <input  type="range" id="top_left" min="0" max="50" value="15" step="1"/>
+                                        <p class="settings_title">Width</p>
+                                    </div>
+                                    <div class="top_right">
+                                        <p class="settings_title">Top Right border</p>
+                                        <input  type="range" id="top_right" min="0" max="50" value="15" step="1"/>
+                                    </div>
+                                </div> -->
+                                <div id="result">
+                                    <div class="top_btns">
+                                        <div class="slider_btn_top_left" ></div>
+                                        <div class="slider_btn_top_right"></div>
+                                      </div>
+                                      <div class="bottom_btns">
+                                        <div class="slider_btn_bottom_left" ></div>
+                                        <div class="slider_btn_bottom_right"></div>
+                                      </div>
+                                </div>
+                                <!-- <div class="bottom_ranges">
+                                    <div class="bottom_left">
+                                        <p class="settings_title">Bottom Left border</p>
+                                        <input  type="range" id="bottom_left" min="0" max="50" value="15" step="1"/>
+                                    </div>
+                                    <div class="bottom_right">
+                                        <p class="settings_title">Bottom Right border</p>
+                                        <input  type="range" id="bottom_right" min="0" max="50" value="15" step="1"/>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="color">
+                                    <div class="color_title">Text Color</div>
+                                    <input type="color" id="font_color">
+                                </div> -->
+                            </form>
+                        </div>
+                        <div class="result_area">
+                            <div class="cssCode_block">
+                                <p class="cssCode_title">CSS code</p>
+                                <textarea id="cssCode" readonly></textarea>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -37,8 +93,8 @@
             </div>
         </div>
     </div>
-    <script>
-        
+    <script src="../../js/jsForBorder.js">
+    
     </script>
 </body>
 </html>
