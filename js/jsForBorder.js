@@ -92,15 +92,15 @@ let result = document.getElementById('result')
 
     top_left_btn.ontouchstart = function (e) {
         e.preventDefault()
-        let shiftX = e.clientX - top_left_btn.getBoundingClientRect().left
-        let shiftY = e.clientY - top_left_btn.getBoundingClientRect().top
+        let shiftX = e.changedTouches[0].clientX - top_left_btn.getBoundingClientRect().left
+        let shiftY = e.changedTouches[0].clientY - top_left_btn.getBoundingClientRect().top
   
         document.addEventListener('touchmove', onMouseMove)
         document.addEventListener('touchend', onMouseUp)
   
         function onMouseMove (e) {
-          let newLeft = e.clientX - shiftX - result.getBoundingClientRect().left
-          let newTop = e.clientY - shiftY - result.getBoundingClientRect().top
+          let newLeft = e.changedTouches[0].clientX - shiftX - result.getBoundingClientRect().left
+          let newTop = e.changedTouches[0].clientY - shiftY - result.getBoundingClientRect().top
           if (newLeft < 0) newLeft = 0
           if (newTop < 0) newTop = 0
           if (newLeft != newTop) newTop = newLeft
@@ -151,15 +151,15 @@ let result = document.getElementById('result')
 
     top_right_btn.ontouchstart = function (e) {
         e.preventDefault()
-        let shiftX = e.clientX - top_right_btn.getBoundingClientRect().left
-        let shiftY = e.clientY - top_right_btn.getBoundingClientRect().top
+        let shiftX = e.changedTouches[0].clientX - top_right_btn.getBoundingClientRect().left
+        let shiftY = e.changedTouches[0].clientY - top_right_btn.getBoundingClientRect().top
   
         document.addEventListener('touchmove', onMouseMove)
         document.addEventListener('touchend', onMouseUp)
   
         function onMouseMove (e) {
-          let newLeft = e.clientX - shiftX - result.getBoundingClientRect().right + 20 
-          let newTop = e.clientY - shiftY - result.getBoundingClientRect().top
+          let newLeft = e.changedTouches[0].clientX - shiftX - result.getBoundingClientRect().right + 20 
+          let newTop = e.changedTouches[0].clientY - shiftY - result.getBoundingClientRect().top
           if (newLeft > 0) newLeft = 0
           if (newTop < 0) newTop = 0
           if (newLeft != newTop) newTop = newLeft
@@ -210,15 +210,15 @@ let result = document.getElementById('result')
 
     bottom_left_btn.ontouchstart = function (e) {
         e.preventDefault()
-        let shiftX = e.clientX - bottom_left_btn.getBoundingClientRect().left
-        let shiftY = e.clientY - bottom_left_btn.getBoundingClientRect().top
+        let shiftX = e.changedTouches[0].clientX - bottom_left_btn.getBoundingClientRect().left
+        let shiftY = e.changedTouches[0].clientY - bottom_left_btn.getBoundingClientRect().top
   
         document.addEventListener('touchmove', onMouseMove)
         document.addEventListener('touchend', onMouseUp)
   
         function onMouseMove (e) {
-          let newLeft = e.clientX - shiftX - result.getBoundingClientRect().left 
-          let newTop = e.clientY - shiftY - result.getBoundingClientRect().bottom
+          let newLeft = e.changedTouches[0].clientX - shiftX - result.getBoundingClientRect().left 
+          let newTop = e.changedTouches[0].clientY - shiftY - result.getBoundingClientRect().bottom
           if (newLeft < 0) newLeft = 0
           if (newTop < 0) newTop = 0
           if (newLeft != newTop) newTop = newLeft
@@ -269,15 +269,15 @@ let result = document.getElementById('result')
 
     bottom_right_btn.ontouchstart = function (e) {
         e.preventDefault()
-        let shiftX = e.clientX - bottom_right_btn.getBoundingClientRect().left
-        let shiftY = e.clientY - bottom_right_btn.getBoundingClientRect().top
+        let shiftX = e.changedTouches[0].clientX - bottom_right_btn.getBoundingClientRect().left
+        let shiftY = e.changedTouches[0].clientY - bottom_right_btn.getBoundingClientRect().top
   
         document.addEventListener('touchmove', onMouseMove)
         document.addEventListener('touchend', onMouseUp)
   
         function onMouseMove (e) {
-          let newLeft = e.clientX - shiftX - result.getBoundingClientRect().right + 20 
-          let newTop = e.clientY - shiftY - result.getBoundingClientRect().bottom
+          let newLeft = e.changedTouches[0].clientX - shiftX - result.getBoundingClientRect().right + 20 
+          let newTop = e.changedTouches[0].clientY - shiftY - result.getBoundingClientRect().bottom
           if (newLeft > 0) newLeft = 0
           if (newTop > 0) newTop = 0
           if (newLeft != newTop) newTop = newLeft
