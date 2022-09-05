@@ -75,9 +75,9 @@ let result = document.getElementById('result')
         if (newLeft < 0) newLeft = 0
         if (newTop < 0) newTop = 0
         if (newLeft != newTop) newTop = newLeft
-        if (newLeft > 80) { 
-          newLeft = 80
-          newTop = 80
+        if (newLeft > 75) { 
+          newLeft = 75
+          newTop = 75
         }
         top_left_btn.style.left = newLeft + 'px'
         top_left_btn.style.top = newTop + 'px'
@@ -104,9 +104,9 @@ let result = document.getElementById('result')
           if (newLeft < 0) newLeft = 0
           if (newTop < 0) newTop = 0
           if (newLeft != newTop) newTop = newLeft
-          if (newLeft > 80) { 
-            newLeft = 80
-            newTop = 80
+          if (newLeft > 65) { 
+            newLeft = 65
+            newTop = 65
           }
           top_left_btn.style.left = newLeft + 'px'
           top_left_btn.style.top = newTop + 'px'
@@ -134,9 +134,9 @@ let result = document.getElementById('result')
         if (newLeft > 0) newLeft = 0
         if (newTop < 0) newTop = 0
         if (newLeft != newTop) newTop = newLeft
-        if (newLeft < -80) { 
-          newLeft = -80
-          newTop = -80
+        if (newLeft < -75) { 
+          newLeft = -75
+          newTop = -75
         }
         top_right_btn.style.left = newLeft + 'px'
         top_right_btn.style.top = 0 - newTop + 'px'
@@ -163,9 +163,9 @@ let result = document.getElementById('result')
           if (newLeft > 0) newLeft = 0
           if (newTop < 0) newTop = 0
           if (newLeft != newTop) newTop = newLeft
-          if (newLeft < -80) { 
-            newLeft = -80
-            newTop = -80
+          if (newLeft < -65) { 
+            newLeft = -65
+            newTop = -65
           }
           top_right_btn.style.left = newLeft + 'px'
           top_right_btn.style.top = 0 - newTop + 'px'
@@ -193,9 +193,9 @@ let result = document.getElementById('result')
         if (newLeft < 0) newLeft = 0
         if (newTop < 0) newTop = 0
         if (newLeft != newTop) newTop = newLeft
-        if (newLeft > 80) { 
-          newLeft = 80
-          newTop = 80
+        if (newLeft > 75) { 
+          newLeft = 75
+          newTop = 75
         }
         bottom_left_btn.style.left = newLeft + 'px'
         bottom_left_btn.style.top = 0 - newTop + 'px'
@@ -222,9 +222,9 @@ let result = document.getElementById('result')
           if (newLeft < 0) newLeft = 0
           if (newTop < 0) newTop = 0
           if (newLeft != newTop) newTop = newLeft
-          if (newLeft > 80) { 
-            newLeft = 80
-            newTop = 80
+          if (newLeft > 65) { 
+            newLeft = 65
+            newTop = 65
           }
           bottom_left_btn.style.left = newLeft + 'px'
           bottom_left_btn.style.top = 0 - newTop + 'px'
@@ -252,9 +252,9 @@ let result = document.getElementById('result')
         if (newLeft > 0) newLeft = 0
         if (newTop > 0) newTop = 0
         if (newLeft != newTop) newTop = newLeft
-        if (newLeft < -80) { 
-          newLeft = -80
-          newTop = -80
+        if (newLeft < -75) { 
+          newLeft = -75
+          newTop = -75
         }
         bottom_right_btn.style.left = newLeft + 'px'
         bottom_right_btn.style.top = newTop + 'px'
@@ -281,9 +281,9 @@ let result = document.getElementById('result')
           if (newLeft > 0) newLeft = 0
           if (newTop > 0) newTop = 0
           if (newLeft != newTop) newTop = newLeft
-          if (newLeft < -80) { 
-            newLeft = -80
-            newTop = -80
+          if (newLeft < -65) { 
+            newLeft = -65
+            newTop = -65
           }
           bottom_right_btn.style.left = newLeft + 'px'
           bottom_right_btn.style.top = newTop + 'px'

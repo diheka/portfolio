@@ -352,8 +352,11 @@ textarea {
         font-size: 10px;
     }
     .cssCode_title {
-        margin-top: 198px;
+        margin-top: 222px;
         margin-bottom: 10px;
+    }
+    .settings_main_title {
+        width: 200px;
     }
 }
 @media (max-width:500px) {
